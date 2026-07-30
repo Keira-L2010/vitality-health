@@ -9,12 +9,12 @@
        DESIGN SYSTEM: RAW EDITORIAL / INDIE PRODUCT LOOK
        ========================================================================== */
     :root {
-      --bg: #FFFFFF;
-      --text: #111111;
-      --muted: #555555;
-      --border: #E5E5E5;
-      --card-bg: #FAFAFA;
-      --accent: #2D5A4C;
+      --bg: #F9F9F9;
+      --text: #000000;
+      --muted: #636E72;
+      --border: #E2E8F0;
+      --card-bg: #FFFFFF;
+      --accent: #00B894;
       --max-width: 680px;
     }
 
@@ -51,6 +51,7 @@
     header {
       padding: 20px 0;
       border-bottom: 1px solid var(--border);
+      background-color: var(--card-bg);
     }
 
     .header-content {
@@ -141,8 +142,8 @@
       background-color: var(--text);
       color: #FFFFFF;
       text-decoration: none;
-      padding: 20px 28px; /* Increased padding for breathing room */
-      margin: 12px 0;    /* Added vertical margin around the button */
+      padding: 20px 28px;
+      margin: 12px 0;
       border-radius: 6px;
       font-size: 17px;
       font-weight: 500;
@@ -165,7 +166,7 @@
 
     /* Quote Box */
     .quote-box {
-      border-left: 2px solid var(--text);
+      border-left: 2px solid var(--accent);
       padding-left: 16px;
       margin-bottom: 20px;
     }
@@ -211,7 +212,7 @@
     }
 
     .step-number {
-      background-color: var(--text);
+      background-color: var(--accent);
       color: #FFFFFF;
       font-weight: 600;
       width: 28px;
@@ -243,7 +244,7 @@
     .price-number {
       font-size: 40px;
       font-weight: 700;
-      color: var(--text);
+      color: var(--accent);
       line-height: 1;
       margin: 8px 0 4px;
     }
@@ -303,7 +304,7 @@
       margin-top: 20px;
       overflow: hidden;
       border-radius: 8px;
-      background: var(--bg);
+      background: var(--card-bg);
       border: 1px solid var(--border);
     }
 
@@ -320,6 +321,8 @@
       text-align: center;
       font-size: 13px;
       color: var(--muted);
+      background-color: var(--card-bg);
+      border-top: 1px solid var(--border);
     }
   </style>
 </head>
@@ -352,7 +355,7 @@
       </div>
     </section>
 
-    <!-- SECTION 2: THE PROBLEM (Alex's Voice) -->
+    <!-- SECTION 2: THE PROBLEM -->
     <section id="problem">
       <div class="container">
         <p style="text-transform: uppercase; letter-spacing: 0.05em; font-size: 12px; font-weight: 600; color: var(--text); margin-bottom: 12px;">The Struggle</p>
@@ -371,10 +374,10 @@
         <div class="visual-card">
           <svg width="360" height="100" viewBox="0 0 360 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="5 Minute Task Visual">
             <rect width="360" height="100" rx="8" fill="#F0F4F2"/>
-            <circle cx="50" cy="50" r="22" fill="#2D5A4C"/>
+            <circle cx="50" cy="50" r="22" fill="#00B894"/>
             <path d="M42 50L47 55L59 42" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="86" y="44" fill="#111111" font-size="15" font-weight="600">Today's Task: 5-Min Stretch</text>
-            <text x="86" y="66" fill="#555555" font-size="13">No gym gear needed. Zero friction.</text>
+            <text x="86" y="44" fill="#000000" font-size="15" font-weight="600">Today's Task: 5-Min Stretch</text>
+            <text x="86" y="66" fill="#636E72" font-size="13">No gym gear needed. Zero friction.</text>
           </svg>
         </div>
       </div>
