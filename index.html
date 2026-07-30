@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitality Health - Daily Fitness Habits Without Stress</title>
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM: RAW EDITORIAL / INDIE PRODUCT LOOK
+       ========================================================================== */
+    :root {
+      --bg: #FFFFFF;
+      --text: #111111;
+      --muted: #555555;
+      --border: #E5E5E5;
+      --card-bg: #FAFAFA;
+      --accent: #2D5A4C;
+      --max-width: 680px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+      padding: 0;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header Bar */
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .header-logo-img {
+      height: 48px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    /* Typography */
+    h1, h2, h3 {
+      color: var(--text);
+      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Sections */
+    section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    /* Top Badge */
+    .badge {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: lowercase;
+    }
+
+    /* Headline Styling */
+    .hero-headline {
+      font-size: 36px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      color: var(--text);
+      letter-spacing: -0.03em;
+    }
+
+    @media (min-width: 600px) {
+      .hero-headline {
+        font-size: 46px;
+      }
+    }
+
+    .hero-subhead {
+      font-size: 19px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      background-color: var(--text);
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 16px 24px;
+      border-radius: 6px;
+      font-size: 17px;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.15s ease;
+      min-height: 52px;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    .guarantee-note {
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* Quote Box */
+    .quote-box {
+      border-left: 2px solid var(--text);
+      padding-left: 16px;
+      margin-bottom: 20px;
+    }
+
+    .customer-quote {
+      font-size: 20px;
+      font-style: normal;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* Visual Card */
+    .visual-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    .visual-card svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Steps */
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background-color: var(--card-bg);
+      padding: 18px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .step-number {
+      background-color: var(--text);
+      color: #FFFFFF;
+      font-weight: 600;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 14px;
+    }
+
+    .step-content h3 {
+      font-size: 16px;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    /* Price Card */
+    .price-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .price-number {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1;
+      margin: 8px 0 4px;
+    }
+
+    .price-period {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* FAQ */
+    .faq-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .faq-item {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .faq-question {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .faq-answer {
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    /* Guarantee Box */
+    .guarantee-box {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .guarantee-title {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    /* Embedded Form Wrapper Container */
+    .form-wrapper {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 20px;
+      overflow: hidden;
+      border-radius: 8px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+
+    .form-wrapper iframe {
+      width: 100% !important;
+      height: 760px;
+      border: none;
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      padding: 32px 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="brand-group">
+          <img src="vitality health logo png.png" alt="Vitality Health Logo" class="header-logo-img">
+        </a>
+        <span class="badge">simple daily fitness</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: HERO -->
+    <section id="hero">
+      <div class="container">
+        <h1 class="hero-headline">
+          Vitality Health is a daily service that builds fitness habits without stress.
+        </h1>
+        <p class="hero-subhead">
+          Designed specifically for busy, burnt-out schedules. Get one non-negotiable 5-minute health task delivered directly to your phone every day—no gym, no complex routines, no overwhelm.
+        </p>
+        <a href="#signup" class="btn" id="hero-cta-button">Get in touch</a>
+        <p class="guarantee-note">Zero risk. 100% money-back guarantee for your first 2 weeks.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE PROBLEM (Alex's Voice) -->
+    <section id="problem">
+      <div class="container">
+        <p style="text-transform: uppercase; letter-spacing: 0.05em; font-size: 12px; font-weight: 600; color: var(--text); margin-bottom: 12px;">The Struggle</p>
+        
+        <div class="quote-box">
+          <p class="customer-quote">"Getting myself up to go there feels like such a big chore."</p>
+        </div>
+
+        <p>
+          When you're already exhausted from work or school, the thought of changing clothes, driving to a crowded gym, or doing a grueling 60-minute workout kills your motivation before you even start.
+        </p>
+        <p>
+          It costs you another month of unused gym membership guilt, endless noise from online fitness influencers, and feeling stuck in low energy.
+        </p>
+
+        <div class="visual-card">
+          <svg width="360" height="100" viewBox="0 0 360 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="5 Minute Task Visual">
+            <rect width="360" height="100" rx="8" fill="#F0F4F2"/>
+            <circle cx="50" cy="50" r="22" fill="#2D5A4C"/>
+            <path d="M42 50L47 55L59 42" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="86" y="44" fill="#111111" font-size="15" font-weight="600">Today's Task: 5-Min Stretch</text>
+            <text x="86" y="66" fill="#555555" font-size="13">No gym gear needed. Zero friction.</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: HOW IT WORKS -->
+    <section id="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <p style="margin-top: 6px;">Built for people who feel too busy or unmotivated for traditional workout programs.</p>
+
+        <div class="steps-list">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Get 1 Simple Notification</h3>
+              <p>One bite-sized, 5-minute action item delivered to your phone daily. No searching through endless workout videos.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Do the 5-Minute Micro-Action</h3>
+              <p>Quick stretches, bodyweight movements, or short walks that fit seamlessly into a hectic day without special equipment.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Tap Complete</h3>
+              <p>Log your task with a single tap and move on with your day. Real progress without burnout.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="price-card">
+          <p style="font-weight: 600; color: var(--text); text-transform: uppercase; font-size: 12px; letter-spacing: 0.05em;">Simple, Transparent Pricing</p>
+          <div class="price-number">$5</div>
+          <div class="price-period">per month</div>
+          <p style="margin-top: 8px; font-size: 14px;">Less than the price of a single coffee. Cancel anytime with one click.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PROOF & GUARANTEE -->
+    <section id="proof">
+      <div class="container">
+        <h2>Our Honest Guarantee</h2>
+        <p style="margin-top: 6px;">We don't rely on fake reviews or flashy influencer hype. Here is our straightforward promise:</p>
+
+        <div class="guarantee-box">
+          <div class="guarantee-title">The 10-Task Guarantee</div>
+          <p>
+            Try Vitality Health for 14 days. Complete at least 10 daily tasks. If you don't feel noticeably more consistent and less stressed about your health, send us a note and we will instantly refund your $5.
+          </p>
+          <p style="font-weight: 500; color: var(--text); margin-top: 8px;">
+            Zero risk. Total peace of mind.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: FAQ / OBJECTIONS -->
+    <section id="faq">
+      <div class="container">
+        <h2>Real Questions, Straight Answers</h2>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">"I am too busy and unmotivated. Will this actually work for me?"</div>
+            <div class="faq-answer">
+              That exact feeling is why Vitality Health exists. Traditional fitness programs fail because they ask for 100% effort when you're already burnt out. Five minutes is so small your brain won't resist it, helping you break the cycle of quitting.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">What if I miss a day or fall behind?</div>
+            <div class="faq-answer">
+              There is no falling behind and no guilt trips. Each day is a fresh start. You simply do today's 5-minute task whenever you have a quiet moment.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: SIGN-UP SECTION (Embedded Google Form) -->
+    <section id="signup" style="background-color: var(--card-bg);">
+      <div class="container" style="text-align: center;">
+        <h2>Have questions or ready to get started?</h2>
+        <p style="margin-bottom: 20px;">Fill out the form below to connect with us directly.</p>
+
+        <!-- Embedded Google Form Iframe -->
+        <div class="form-wrapper">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdPUmbwOOSm9NnGhCOH_OdHDQ563DVT48btHMMJWjaN2-Qgag/viewform?embedded=true" width="640" height="760" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+
+        <p class="guarantee-note" style="margin-top: 16px;">
+          We personally review every submission and reply within 24 hours.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Vitality Health. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Vitality Health Landing Page loaded successfully.');
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>
